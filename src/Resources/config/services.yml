@@ -1,0 +1,18 @@
+services:
+    sirian_storage.file_manager:
+        class: Sirian\StorageBundle\Storage\FileManager
+        arguments: ['@doctrine.odm.mongodb.document_manager']
+
+    sirian_storage.file_helper:
+        class: Sirian\StorageBundle\Storage\FileHelper
+        arguments: ['@router.default']
+
+    sirian_storage.thumb_manager:
+        class: Sirian\StorageBundle\Thumb\ThumbManager
+        arguments: ['@doctrine.odm.mongodb.document_manager', '@sirian_storage.file_manager', '@sirian_storage.file_helper']
+
+    sirian_storage.twig_extension:
+        class: Sirian\StorageBundle\Twig\StorageExtension
+        arguments: ["@sirian_storage.file_helper"]
+        tags:
+            - { name: twig.extension }

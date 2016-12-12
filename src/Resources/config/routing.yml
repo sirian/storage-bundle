@@ -1,0 +1,9 @@
+sirian_storage_file:
+    path: /files/{name}
+    defaults:
+        _controller: SirianStorageBundle:File:file
+
+sirian_storage_thumb:
+    path: /thumbs/{filter}/{name}
+    defaults:
+        _controller: SirianStorageBundle:File:thumb

@@ -1,0 +1,18 @@
+{
+    "name": "sirian/storage-bundle",
+    "type": "library",
+    "description": "",
+    "keywords": [],
+    "autoload": {
+        "psr-4": { "Sirian\\StorageBundle\\": "src/" }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/symfony": ">=3.0.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
