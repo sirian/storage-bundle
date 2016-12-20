@@ -15,6 +15,7 @@ class StorageFileType extends AbstractType
     {
         $builder
             ->add('uploadedFile', FileType::class, [
+                'required' => $options['required'],
                 'error_bubbling' => true,
                 'constraints' => [
                     new File()
